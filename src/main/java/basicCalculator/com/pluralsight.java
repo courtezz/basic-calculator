@@ -3,18 +3,30 @@ package basicCalculator.com;
 import java.util.Scanner;
 
 public class pluralsight {
+    private static Scanner myScanner;
+
     public static void main(String[] args) {
 
-       Scanner myScanner = new Scanner(System.in);
+        Scanner myScanner = new Scanner(System.in);
 
-       System.out.print("5");
-       int num1 = myScanner.nextInt();
+     System.out.print("Enter your name: ");
+     String name = myScanner.nextLine();
+     System.out.println(name);
 
-        System.out.print("12");
-        int num2 = myScanner.nextInt();
+     System.out.print("Enter hours worked: ");
+     float hoursWorked = myScanner.nextFloat();
 
-      int sum = (num1 * num2);
-      System.out.println("the sum is" + sum);
+     System.out.print("Enter your pay rate: ");
+     float payRate = myScanner.nextFloat();
+
+     float grossPay = hoursWorked * payRate;
+     System.out.printf("%s Name earned $%f.2f", name , grossPay);
+
+
+
+
+
+
 
     }
 }
